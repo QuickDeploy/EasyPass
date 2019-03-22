@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="keywords" content="免费,在线,随机,密码生成器, random password, password generator"/>
+	<meta name="description" content="各种账号，各种奇奇怪怪的要求，已经想不出新的密码了？快试试免费的在线随机密码生成器吧。"/>
+	<meta name="author" content="Newnius"/>
+	<link rel="icon" href="favicon.ico"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="css/style.css" rel="stylesheet"/>
+	<title>免费的在线随机密码生成器</title>
+</head>
+<body>
+<div class="wrapper">
+	<header id="header" class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+				        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">在线密码生成器</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="help.html">帮助</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container -->
+	</header>
+	<div class="container">
+		<div id="main" class="fade active in">
+			<div class="hidden-xs">
+				<img style="height: 70px; width: 70px;" src="images/logo.gif"/>
+				<div class="pull-right" style="height:70px;">
+					<div style="height: 88px;"></div>
+					<span id="header-tooltip" class="text-info"></span>
+				</div>
+				<hr/>
+			</div>
+			<form class="form" action="javascript:void(0)">
+				<div class="form-group input-group input-group-lg">
+					<input type="text" id="form-generate-result" class="form-control" readonly/>
+					<span class="input-group-btn">
+						<button id="form-copy" data-clipboard-target="#form-generate-result" class="btn btn-default">
+							<i class="glyphicon glyphicon-copy"></i>
+						</button>
+					</span>
+				</div>
+				<hr/>
+				<div class="form-group input-group input-group-lg">
+					<input type="number" id="form-generate-length" class="form-control"
+					       min="1" value="16" placeholder="密码长度" required/>
+					<span class="input-group-btn">
+						<button type="submit" id="form-generate-submit" class="btn btn-default"><i
+								class="glyphicon glyphicon-play"></i></button>
+					</span>
+				</div>
+				<div class="form-group form-group-lg">
+					<input type="checkbox" id="form-option-digit" class="" checked/>
+					<label for="form-option-digit">阿拉伯数字(0-9)</label>
+				</div>
+				<div class="form-group form-group-lg">
+					<input type="checkbox" id="form-option-lower" class="" checked/>
+					<label for="form-option-lower">小写字母(a-z)</label>
+				</div>
+				<div class="form-group form-group-lg">
+					<input type="checkbox" id="form-option-upper" class="" checked/>
+					<label for="form-option-upper">大写字母(A-Z)</label>
+				</div>
+				<div class="form-group form-group-lg">
+					<input type="checkbox" id="form-option-special" class=""/>
+					<label for="form-option-special">特殊字符(+=-@#~,.[]()!%^*$)</label>
+				</div>
+				<div class="form-group form-group-lg">
+					<input type="checkbox" id="form-option-readable" class="" checked/>
+					<label for="form-option-readable">去除易混淆字符(0OIl)</label>
+				</div>
+			</form>
+		</div>
+		<hr/>
+		<div id="tips" class="hidden-xs">
+			<h4>小贴士</h4>
+			<ul>
+				<li>随机密码生成工具是将数字，标点符号，英文字母等字符随机打乱并进行组合得到的一串字符。生成的密码没有规律可循，从而获得高强度密码，避免被撞库攻击或猜出。</li>
+				<li>设置密码时，不要使用<a rel="nofollow" target="_blank" href="https://my5353.com/HpsXx">弱密码。</a></li>
+				<li>一个高强度的密码至少涵盖数字、大小写字母等字符，并且长度不少于12位。</li>
+				<li>为不同的账户设置不同的密码，避免一个密码泄漏导致更多账号出现安全问题。</li>
+				<li>不定期更改密码可以减少账号被盗的风险。</li>
+			</ul>
+			<br/>
+		</div>
+	</div> <!-- /container -->
+	<!--This div exists to avoid footer from covering main body-->
+	<div class="push"></div>
+</div>
+<footer class="container">
+	<div class="footer">
+		<ul class="breadcrumb">
+			<li>&copy;2018&nbsp;<a href="https://easypwd.newnius.com">密码生成器</a></li>
+			<li><a href="https://blog.newnius.com" target="_blank">Newnius</a></li>
+			<li><a href="help.html#">TOS</a></li>
+			<li><a href="help.html#privacy">Privacy</a></li>
+			<li><a href="help.html#feedback">Contact</a></li>
+			<li><a href="help.html">Help</a></li>
+			<li><a href="help.html#about">About</a></li>
+			<li><i class="glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;<span class="cr_count_site_pv"></span></i></li>
+			<li><i class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;<span class="cr_count_site_uv"></span></i></li>
+		</ul>
+	</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
+<script src="js/script.js"></script>
+<script async src="js/ea.js"></script>
+</body>
+</html>
